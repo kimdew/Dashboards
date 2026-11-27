@@ -236,6 +236,9 @@
 
   .hero-top{display:flex; align-items:flex-start; justify-content:space-between; gap:10px; flex-wrap:wrap;}
   .last-upd{font-size:12px; font-weight:700; color:#475569; background:#f1f5f9; border:1px solid #e2e8f0; border-radius:999px; padding:4px 10px; white-space:nowrap; font-variant-numeric:tabular-nums;}
+
+  .flr{display:inline-block; font-size:11px; font-weight:700; color:#64748b; background:#f1f5f9; border-radius:5px; padding:1px 5px; margin-left:4px; vertical-align:middle;}
+  .flr.warn-flr{color:#b45309; background:#fef3c7;}
 </style>
 </head>
 <body>
@@ -263,6 +266,7 @@
   <div class="toolbar">
     <span class="lbl">지역</span>
     <div class="seg" id="f-region"></div>
+    <div class="seg" id="f-area"></div>
     <span class="grow"></span>
     <span class="lbl">정렬</span>
     <div class="seg" id="f-sort"></div>
@@ -288,7 +292,7 @@
       <td class="region">강남<br>수서</td>
       <td class="age">34년</td>
       <td class="name">까치마을 <span class="py">21평</span><span class="ty">아파트 · 7개동 · 70.45 / 49.5㎡</span></td>
-      <td class="price min">19억 5,000</td>
+      <td class="price min">19억 5,000 <span class="flr">저/15층</span></td>
       <td class="price avg">20억 3,400</td>
       <td class="deals3"><div class="dline"><b>19억 9,500</b> <span class="dmeta">26.11.07·10층</span></div><div class="dline"><b>20억 1,500</b> <span class="dmeta">26.06.19·14층</span></div><div class="dline"><b>17억 9,000</b> <span class="dmeta">26.05.06·3층</span></div></td>
       <td class="gap down">-2.3%</td>
@@ -350,7 +354,7 @@
       <td class="region">성남<br>분당</td>
       <td class="age">33년</td>
       <td class="name">이매삼성 <span class="py">21평</span><span class="ty">아파트 · 27개동 · 74.3 / 59.5㎡</span></td>
-      <td class="price min">16억 3,000</td>
+      <td class="price min">16억 3,000 <span class="flr warn-flr">5/5층(탑층)</span></td>
       <td class="price avg">16억 5,700</td>
       <td class="deals3"><div class="dline"><b>14억 6,000</b> <span class="dmeta">26.06.06·5층</span></div><div class="dline"><b>12억 800</b> <span class="out">이상거래</span> <span class="dmeta">26.05.15·4층</span></div><div class="dline"><b>15억 4,800</b> <span class="dmeta">26.03.23·3층</span></div></td>
       <td class="gap up">+11.6%</td>
@@ -412,7 +416,7 @@
       <td class="region">성남<br>분당</td>
       <td class="age">33년</td>
       <td class="name">이매삼성 <span class="py">27평</span><span class="ty">아파트 · 27개동 · 91 / 73.25㎡</span></td>
-      <td class="price min">18억</td>
+      <td class="price min">18억 <span class="flr">중/13층</span></td>
       <td class="price avg">18억 5,700</td>
       <td class="deals3"><div class="dline"><b>16억 5,000</b> <span class="dmeta">26.11.24·9층</span></div><div class="dline"><b>17억</b> <span class="dmeta">26.10.28·6층</span></div><div class="dline"><b>17억 2,000</b> <span class="dmeta">26.08.14·4층</span></div></td>
       <td class="gap up">+9.1%</td>
@@ -474,7 +478,7 @@
       <td class="region">성남<br>분당</td>
       <td class="age">33년</td>
       <td class="name">이매삼성 <span class="py">32평</span><span class="ty">아파트 · 27개동 · 106 / 84.94㎡</span></td>
-      <td class="price min">19억 5,000</td>
+      <td class="price min">19억 5,000 <span class="flr warn-flr">15/15층(탑층)</span></td>
       <td class="price avg">20억 6,800</td>
       <td class="deals3"><div class="dline"><b>17억 7,000</b> <span class="dmeta">26.08.17·1층</span></div><div class="dline"><b>18억 4,900</b> <span class="dmeta">26.05.16·11층</span></div><div class="dline"><b>17억</b> <span class="dmeta">26.03.14·5층</span></div></td>
       <td class="gap up">+10.2%</td>
@@ -536,7 +540,7 @@
       <td class="region">성남<br>분당</td>
       <td class="age">32년</td>
       <td class="name">이매삼환 <span class="py">23평</span><span class="ty">아파트 · 10개동 · 76.6 / 59㎡</span></td>
-      <td class="price min">17억 2,000</td>
+      <td class="price min">17억 2,000 <span class="flr">8/10층</span></td>
       <td class="price avg">17억 2,000</td>
       <td class="deals3"><div class="dline"><b>14억 2,000</b> <span class="dmeta">26.05.08·8층</span></div><div class="dline"><b>13억 6,000</b> <span class="dmeta">25.10.01·3층</span></div><div class="dline"><b>11억 1,500</b> <span class="out">이상거래</span> <span class="dmeta">25.06.20·5층</span></div></td>
       <td class="gap up">+21.1%</td>
@@ -591,7 +595,7 @@
       <td class="region">성남<br>분당</td>
       <td class="age">32년</td>
       <td class="name">이매삼환 <span class="py">31평</span><span class="ty">아파트 · 10개동 · 103 / 84㎡</span></td>
-      <td class="price min">18억 9,000</td>
+      <td class="price min">18억 9,000 <span class="flr">7/20층</span></td>
       <td class="price avg">20억 3,400</td>
       <td class="deals3"><div class="dline"><b>13억</b> <span class="out">이상거래</span> <span class="dmeta">26.11.09·4층</span></div><div class="dline"><b>18억 5,000</b> <span class="dmeta">26.10.01·13층</span></div><div class="dline"><b>18억 8,000</b> <span class="dmeta">26.06.27·14층</span></div></td>
       <td class="gap up">+2.2%</td>
@@ -653,7 +657,7 @@
       <td class="region">성남<br>분당</td>
       <td class="age">34년</td>
       <td class="name">장미1단지동부 <span class="py">23평</span><span class="ty">아파트 · 21개동 · 78.19 / 59㎡</span></td>
-      <td class="price min">13억 9,000</td>
+      <td class="price min">13억 9,000 <span class="flr">10/15층</span></td>
       <td class="price avg">14억 3,200</td>
       <td class="deals3"><div class="dline"><b>14억 4,500</b> <span class="dmeta">26.11.17·9층</span></div><div class="dline"><b>14억 4,000</b> <span class="dmeta">26.11.02·12층</span></div><div class="dline"><b>14억 2,000</b> <span class="dmeta">26.10.30·8층</span></div></td>
       <td class="gap down">-3.8%</td>
@@ -715,7 +719,7 @@
       <td class="region">성남<br>분당</td>
       <td class="age">34년</td>
       <td class="name">장미1단지동부 <span class="py">26평</span><span class="ty">아파트 · 21개동 · 88 / 70㎡</span></td>
-      <td class="price min">15억</td>
+      <td class="price min">15억 <span class="flr">저/14층</span></td>
       <td class="price avg">15억 2,300</td>
       <td class="deals3"><div class="dline"><b>15억 3,000</b> <span class="dmeta">26.08.10·12층</span></div><div class="dline"><b>13억 1,000</b> <span class="dmeta">26.04.13·2층</span></div><div class="dline"><b>12억 9,000</b> <span class="out">이상거래</span> <span class="dmeta">26.01.27·14층</span></div></td>
       <td class="gap down">-2.0%</td>
@@ -777,7 +781,7 @@
       <td class="region">성남<br>분당</td>
       <td class="age">34년</td>
       <td class="name">장미1단지동부 <span class="py">32평</span><span class="ty">아파트 · 21개동 · 106 / 84㎡</span></td>
-      <td class="price min">15억</td>
+      <td class="price min">15억 <span class="flr warn-flr">1/16층</span></td>
       <td class="price avg">15억 8,800</td>
       <td class="deals3"><div class="dline"><b>16억 5,000</b> <span class="dmeta">26.10.01·16층</span></div><div class="dline"><b>15억 7,000</b> <span class="dmeta">26.07.03·12층</span></div><div class="dline"><b>16억</b> <span class="dmeta">26.06.18·8층</span></div></td>
       <td class="gap down">-9.1%</td>
@@ -839,7 +843,7 @@
       <td class="region">성남<br>분당</td>
       <td class="age">34년</td>
       <td class="name">장미1단지코오롱 <span class="py">23평</span><span class="ty">아파트 · 18개동 · 78.35 / 59㎡</span></td>
-      <td class="price min">14억</td>
+      <td class="price min">14억 <span class="flr warn-flr">11/16층</span></td>
       <td class="price avg">14억 3,200</td>
       <td class="deals3"><div class="dline"><b>14억 2,000</b> <span class="dmeta">26.10.24·5층</span></div><div class="dline"><b>13억 4,700</b> <span class="dmeta">26.06.28·3층</span></div><div class="dline"><b>13억 2,000</b> <span class="dmeta">26.05.07·11층</span></div></td>
       <td class="gap down">-1.4%</td>
@@ -901,7 +905,7 @@
       <td class="region">성남<br>분당</td>
       <td class="age">34년</td>
       <td class="name">장미1단지코오롱 <span class="py">27평</span><span class="ty">아파트 · 18개동 · 91 / 74㎡</span></td>
-      <td class="price min">15억</td>
+      <td class="price min">15억 <span class="flr">14/15층</span></td>
       <td class="price avg">15억 2,500</td>
       <td class="deals3"><div class="dline"><b>12억 5,000</b> <span class="dmeta">26.04.28·5층</span></div><div class="dline"><b>12억 5,500</b> <span class="dmeta">26.04.23·2층</span></div><div class="dline"><b>13억 5,000</b> <span class="dmeta">26.01.20·3층</span></div></td>
       <td class="gap up">+19.5%</td>
@@ -963,7 +967,7 @@
       <td class="region">성남<br>분당</td>
       <td class="age">34년</td>
       <td class="name">장미1단지코오롱 <span class="py">32평</span><span class="ty">아파트 · 18개동 · 106 / 84㎡</span></td>
-      <td class="price min">15억 9,000</td>
+      <td class="price min">15억 9,000 <span class="flr warn-flr">16/16층(탑층)</span></td>
       <td class="price avg">16억 8,200</td>
       <td class="deals3"><div class="dline"><b>16억 2,000</b> <span class="dmeta">26.11.03·16층</span></div><div class="dline"><b>16억 3,000</b> <span class="dmeta">26.10.05·10층</span></div><div class="dline"><b>16억 4,000</b> <span class="dmeta">26.07.08·16층</span></div></td>
       <td class="gap down">-1.9%</td>
@@ -1025,7 +1029,7 @@
       <td class="region">성남<br>분당</td>
       <td class="age">32년</td>
       <td class="name">까치건영 <span class="py">22평</span><span class="ty">저층 아파트 · 25개동 · 72.7~73.8 / 59㎡</span></td>
-      <td class="price min">15억 8,000</td>
+      <td class="price min">15억 8,000 <span class="flr warn-flr">1/4층</span></td>
       <td class="price avg">16억 4,200</td>
       <td class="deals3"><span class="na">실거래 없음</span></td>
       <td class="gap na">—</td>
@@ -1087,7 +1091,7 @@
       <td class="region">용인<br>수지</td>
       <td class="age">26년</td>
       <td class="name">신정1단지주공 <span class="py">25평</span><span class="ty">아파트 · 12개동 · 83.5 / 59㎡</span></td>
-      <td class="price min">12억 5,000</td>
+      <td class="price min">12억 5,000 <span class="flr warn-flr">1/18층</span></td>
       <td class="price avg">13억 2,100</td>
       <td class="deals3"><div class="dline"><b>12억 5,000</b> <span class="dmeta">26.11.26·4층</span></div><div class="dline"><b>12억 5,500</b> <span class="dmeta">26.11.07·4층</span></div><div class="dline"><b>13억 4,000</b> <span class="dmeta">26.11.04·16층</span></div></td>
       <td class="gap down">0.0%</td>
@@ -1149,7 +1153,7 @@
       <td class="region">용인<br>수지</td>
       <td class="age">26년</td>
       <td class="name">신정7단지상록 <span class="py">24평</span><span class="ty">아파트 · 7개동 · 81.9 / 59㎡</span></td>
-      <td class="price min">12억 2,000</td>
+      <td class="price min">12억 2,000 <span class="flr warn-flr">1/20층</span></td>
       <td class="price avg">12억 7,800</td>
       <td class="deals3"><div class="dline"><b>12억 8,000</b> <span class="dmeta">26.11.13·16층</span></div><div class="dline"><b>12억 6,000</b> <span class="dmeta">26.10.30·19층</span></div><div class="dline"><b>12억 8,000</b> <span class="dmeta">26.10.29·10층</span></div></td>
       <td class="gap down">-4.7%</td>
@@ -1211,7 +1215,7 @@
       <td class="region">용인<br>수지</td>
       <td class="age">26년</td>
       <td class="name">신정7단지상록 <span class="py">33평</span><span class="ty">아파트 · 7개동 · 109.34 / 84㎡</span></td>
-      <td class="price min">14억 8,500</td>
+      <td class="price min">14억 8,500 <span class="flr">2/20층</span></td>
       <td class="price avg">15억 3,900</td>
       <td class="deals3"><div class="dline"><b>13억 9,000</b> <span class="dmeta">26.11.11·2층</span></div><div class="dline"><b>14억 9,000</b> <span class="dmeta">26.10.17·10층</span></div><div class="dline"><b>14억 7,000</b> <span class="dmeta">26.10.15·17층</span></div></td>
       <td class="gap up">+6.8%</td>
@@ -1293,6 +1297,7 @@
 (function() {
   const tb = document.getElementById("tbody");
   const fRegion = document.getElementById("f-region");
+  const fArea = document.getElementById("f-area");
   const fSort = document.getElementById("f-sort");
   if (!tb || !fRegion || !fSort) return;
 
@@ -1320,13 +1325,18 @@
   });
 
   const regions = ["전체", ...Array.from(new Set(pairs.map(p => p.region)))];
+  const areas = [
+    { k: "all", t: "평형 전체" },
+    { k: "20",  t: "20평형대" },
+    { k: "30",  t: "30평형대" }
+  ];
   const SORTS = [
     { k: "name",    t: "이름순 (지역·단지)" },
     { k: "minAsc",  t: "최저가 낮은순 ▲" },
     { k: "minDesc", t: "최저가 높은순 ▼" }
   ];
 
-  const state = { region: "전체", sort: "name" };
+  const state = { region: "전체", area: "all", sort: "name" };
 
   function apply() {
     const sorted = pairs.slice().sort((a, b) => {
@@ -1340,7 +1350,11 @@
     });
 
     sorted.forEach(p => {
-      const show = (state.region === "전체" || p.region === state.region);
+      const okReg = (state.region === "전체" || p.region === state.region);
+      const okArea = (state.area === "all") ||
+        (state.area === "20" && p.py >= 20 && p.py < 30) ||
+        (state.area === "30" && p.py >= 30 && p.py < 40);
+      const show = okReg && okArea;
       p.tr.style.display = show ? "" : "none";
       if (p.det) p.det.style.display = show ? "" : "none";
       tb.appendChild(p.tr);
@@ -1361,6 +1375,22 @@
     };
     fRegion.appendChild(b);
   });
+
+  if (fArea) {
+    areas.forEach(a => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.textContent = a.t;
+      b.dataset.v = a.k;
+      if (a.k === state.area) b.className = "on";
+      b.onclick = () => {
+        state.area = a.k;
+        [...fArea.children].forEach(c => c.className = c.dataset.v === a.k ? "on" : "");
+        apply();
+      };
+      fArea.appendChild(b);
+    });
+  }
 
   SORTS.forEach(s => {
     const b = document.createElement("button");
