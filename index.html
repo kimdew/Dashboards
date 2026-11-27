@@ -233,14 +233,17 @@
     td.deals3::before{content:"최근 실거래 3건"; display:block; font-size:10.5px; font-weight:800; color:var(--muted); margin-bottom:2px;}
   }
 
+
+  .hero-top{display:flex; align-items:flex-start; justify-content:space-between; gap:10px; flex-wrap:wrap;}
+  .last-upd{font-size:12px; font-weight:700; color:#475569; background:#f1f5f9; border:1px solid #e2e8f0; border-radius:999px; padding:4px 10px; white-space:nowrap; font-variant-numeric:tabular-nums;}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header class="hero">
-    <h1>수서 · 분당 · 수지 <span class="tag">매물 비교</span></h1>
-    <p class="sub">8개 단지 15개 평형의 <b>매매 호가</b>와 <b>실거래가</b>를 한 표에 모았습니다. 행을 누르면 최저가 매물과 중개사, 네이버 부동산 바로가기가 열립니다.<br><span style="font-size:12.5px">※ 이매·장미마을(재건축 추진 단지)은 호가가 실거래보다 <b>10~20% 높게</b> 형성돼 있어 &lsquo;실거래 대비&rsquo; 칸을 함께 보셔야 합니다.</span></p>
+    <div class="hero-top"><h1>수서 · 분당 · 수지 <span class="tag">매물 비교</span></h1><span class="last-upd" id="last-updated">Last updated: 2026-11-27 15:25 KST</span></div>
+    <p class="sub">8개 단지 16개 평형의 <b>매매 호가</b>와 <b>실거래가</b>를 한 표에 모았습니다. 행을 누르면 최저가 매물과 중개사, 네이버 부동산 바로가기가 열립니다.<br><span style="font-size:12.5px">※ 이매·장미마을(재건축 추진 단지)은 호가가 실거래보다 <b>10~20% 높게</b> 형성돼 있어 &lsquo;실거래 대비&rsquo; 칸을 함께 보셔야 합니다.</span></p>
     <div class="chips">
       <span class="chip">기준일 <b>2026.11.27</b></span>
       <span class="chip">거래 <b>매매</b></span>
