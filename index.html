@@ -356,6 +356,7 @@
     <span class="lbl">지역</span>
     <div class="seg" id="f-region"></div>
     <div class="seg" id="f-area"></div>
+    <div class="seg" id="f-price"></div>
     <span class="grow"></span>
     <span class="lbl">정렬</span>
     <div class="seg" id="f-sort"></div>
@@ -2062,6 +2063,7 @@
   const tb = document.getElementById("tbody");
   const fRegion = document.getElementById("f-region");
   const fArea = document.getElementById("f-area");
+  const fPrice = document.getElementById("f-price");
   const fSort = document.getElementById("f-sort");
   if (!tb || !fRegion || !fSort) return;
 
@@ -2101,7 +2103,7 @@
     { k: "minDesc", t: "최저가 높은순 ▼" }
   ];
 
-  const state = { region: "전체", area: "all", sort: "name" };
+  const state = { region: "전체", area: "all", priceMax: null, sort: "name" };
 
   function apply() {
     const sorted = pairs.slice().sort((a, b) => {
@@ -2120,7 +2122,8 @@
         (state.area === "20s" && p.py >= 20 && p.py < 25) ||
         (state.area === "25m" && p.py >= 25 && p.py < 30) ||
         (state.area === "30" && p.py >= 30 && p.py < 40);
-      const show = okReg && okArea;
+      const okPrice = (state.priceMax === null) || (p.minPrice <= state.priceMax);
+      const show = okReg && okArea && okPrice;
       p.tr.style.display = show ? "" : "none";
       if (p.det) p.det.style.display = show ? "" : "none";
       tb.appendChild(p.tr);
@@ -2156,6 +2159,18 @@
       };
       fArea.appendChild(b);
     });
+  }
+
+  if (fPrice) {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.textContent = "15억 이하만";
+    b.onclick = () => {
+      state.priceMax = state.priceMax === 15 ? null : 15;
+      b.className = state.priceMax === 15 ? "on" : "";
+      apply();
+    };
+    fPrice.appendChild(b);
   }
 
   SORTS.forEach(s => {
